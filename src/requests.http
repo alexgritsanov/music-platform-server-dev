@@ -1,0 +1,50 @@
+###
+
+
+###
+POST http://localhost:5000/tracks
+content-type: application/json
+
+{
+    "name": "Track 4",
+    "artist": "ACDC",
+    "text": "Words"
+}
+
+###
+GET http://localhost:5000/tracks
+content-type: application/json
+
+###
+GET http://localhost:5000/tracks?count=2&offset=2
+content-type: application/json
+
+###
+GET http://localhost:5000/tracks/search?query=tra
+content-type: application/json
+
+
+###
+GET http://localhost:5000/tracks/628447fae970d679731ff603
+content-type: application/json
+
+###
+DELETE  http://localhost:5000/tracks/628447c7e970d679731ff601
+content-type: application/json
+
+
+
+###
+POST http://localhost:5000/tracks/comment
+content-type: application/json
+
+{
+    "username": "Track1",
+    "trackId": "628447fae970d679731ff603",
+    "text": " nice"
+    
+}
+
+###
+POST  http://localhost:5000/tracks/listen/628447fae970d679731ff603
+content-type: application/json
